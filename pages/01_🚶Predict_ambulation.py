@@ -100,7 +100,6 @@ Occupation_dic = {"Housemaker": 0, "Student": 0, "Unemployed": 1, "Retired": 1, 
 #st.table(features_df)
 
 if st.button('Predict'):
-    setup(memory=False)
     model = load_model_for_cache()
 
     features = {'Age': Age,
@@ -186,6 +185,7 @@ if st.button('Predict'):
     no_use_df = pd.DataFrame([no_use])
 
     features_df = pd.concat([features_df, no_use_df], axis=1)
+    setup(features_df, memory=False)
     predictions_data = predict_model(model, features_df)
     predicted_class = predictions_data["Label"][0]
     score = predictions_data["Score"][0]
