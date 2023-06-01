@@ -81,7 +81,7 @@ Educational_background = st.sidebar.selectbox('Educational background (final edu
 
 Educational_background_dic = {"Elementary school": 2, "Junior high school": 3, "High school": 4, "University": 5, "Graduate school": 6}
 
-Occupation_input = st.sidebar.selectbox('Occupation)',
+Occupation_input = st.sidebar.selectbox('Occupation',
                           ("Housemaker", "Student", "Unemployed", "Retired", "Employed"))
 
 Occupation_dic = {"Housemaker": 0, "Student": 0, "Unemployed": 1, "Retired": 1, "Employed": 0}
