@@ -1,1 +1,1 @@
-pycaret==3.0.2
+pycaret[full]==3.0.2
