@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from pycaret.classification import load_model, predict_model
+from pycaret.classification import load_model, predict_model, setup
 
 
 @st.cache(allow_output_mutation=True)
@@ -100,6 +100,7 @@ Occupation_dic = {"Housemaker": 0, "Student": 0, "Unemployed": 1, "Retired": 1, 
 #st.table(features_df)
 
 if st.button('Predict'):
+    setup(memory=False)
     model = load_model_for_cache()
 
     features = {'Age': Age,
